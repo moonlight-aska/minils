@@ -16,7 +16,7 @@ func (fsys *osFS) Open(name string) (fs.File, error) {
      return err
 }
 
-func (fsys, *osFS) ReadDir(name string) ([]fs.DirEntry, error) {
+func (fsys *osFS) ReadDir(name string) ([]fs.DirEntry, error) {
      return os.ReadDir(name)
 }
 
