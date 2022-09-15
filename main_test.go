@@ -34,7 +34,7 @@ func testFS() fstest.MapFS {
           "path/to/a.txt":      &fstest.MapFile{Data: []byte("test\n")},
           "path/to/b.txt":      &fstest.MapFile{Data: []byte("test\n")},
           "path/to/go":         &fstest.MapFile{Mode: fs.ModeDir},
-          "path/to/go/c.txt"    &fstest.MapFile{Data: []byte("test\n")},
+          "path/to/go/c.txt":   &fstest.MapFile{Data: []byte("test\n")},
      }
      return fsys
 }
