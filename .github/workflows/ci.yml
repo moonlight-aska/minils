@@ -4,13 +4,13 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-    steps:
-        - uses: actions/checkout@v2 # CI環境にリモートリポジトリのコードをチェックアウトする.
-        - name: Set up Go
-          uses: actions/setup-go@v2 # CI環境にGoの環境をセットアップする.
-          with:
-            go-version: 1.19
-        - name: Build  # アプリケーションのビルドを実行する
-          run: go build -v ./...
-        - name: Test   # アプリケーションのテストを実行する
-          run: go test -v ./...
+        steps:
+            - uses: actions/checkout@v2 # CI環境にリモートリポジトリのコードをチェックアウトする.
+            - name: Set up Go
+              uses: actions/setup-go@v2 # CI環境にGoの環境をセットアップする.
+              with:
+                go-version: 1.19
+            - name: Build  # アプリケーションのビルドを実行する
+              run: go build -v ./...
+            - name: Test   # アプリケーションのテストを実行する
+              run: go test -v ./...
