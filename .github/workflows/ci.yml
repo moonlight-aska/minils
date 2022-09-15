@@ -10,6 +10,11 @@ jobs:
               uses: actions/setup-go@v2 # CI環境にGoの環境をセットアップする.
               with:
                 go-version: 1.19
+            - name: Lint
+              uses: reviewdog/action-golangci-lint@v2
+              with:
+                reporter:   github-pr-review
+                fail_on_error: true
             - name: Build  # アプリケーションのビルドを実行する
               run: go build -v ./...
             - name: Test   # アプリケーションのテストを実行する
