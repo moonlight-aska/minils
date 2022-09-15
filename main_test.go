@@ -28,7 +28,7 @@ func TestListDir(t *testing.T) {
 }
 
 func testFS() fstest.MapFS {
-     fsys := fsest.MapFS {
+     fsys := fstest.MapFS {
           "path":               &fstest.MapFile{Mode: fs.ModeDir},
           "path/to":            &fstest.MapFile{Mode: fs.ModeDir},
           "path/to/a.txt":      &fstest.MapFile{Data: []byte("test\n")},
