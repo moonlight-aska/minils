@@ -13,7 +13,7 @@ func TestListDir(t *testing.T) {
      } {
           {"path", "to\n"},
           {"path/to", "a.txt\nb.txt\ngo\n"},
-          {"path/to/go", "c.txt"},
+          {"path/to/go", "c.txt\n"},
      }
      for _, tt := range tests {
          buf := new(bytes.Buffer)
