@@ -17,7 +17,7 @@ func (fsys *osFS) Open(name string) (fs.File, error) {
 }
 
 func (fsys, *osFS) ReadDir(name string) ([]fs.DirEntry, error) {
-     reurn os.ReadDir(name)
+     return os.ReadDir(name)
 }
 
 func main() {
@@ -36,7 +36,7 @@ func run() error {
      return listDir(fsys, wd, os.Stdout)
 }
 
-func listDir(fsys, fs.ReadDirFS, dir string, out io.Writer) error {
+func listDir(fsys fs.ReadDirFS, dir string, out io.Writer) error {
      entries, err := fsys.ReadDir(dir)
      if err != nil {
         return err
